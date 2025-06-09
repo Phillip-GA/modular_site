@@ -1,0 +1,683 @@
+<div class="page-content">
+  <h2 class="text-xl font-medium mb-6 text-white">Technology</h2>
+  
+  <!-- Top 4 Metrics -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+    <div class="bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-700">
+      <h3 class="font-medium mb-3 text-gray-200">App Availability</h3>
+      <div class="h-24 flex items-center justify-center bg-gray-700 rounded">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-blue-400 mb-1">99.8%</div>
+          <div class="text-sm text-gray-400">Uptime</div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-700">
+      <h3 class="font-medium mb-3 text-gray-200">Lead Time</h3>
+      <div class="h-24 flex items-center justify-center bg-gray-700 rounded">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-green-400 mb-1">3.2</div>
+          <div class="text-sm text-gray-400">Days</div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-700">
+      <h3 class="font-medium mb-3 text-gray-200">Deployment Frequency</h3>
+      <div class="h-24 flex items-center justify-center bg-gray-700 rounded">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-purple-400 mb-1">5.4</div>
+          <div class="text-sm text-gray-400">Weekly</div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-700">
+      <h3 class="font-medium mb-3 text-gray-200">Active SDUs</h3>
+      <div class="h-24 flex items-center justify-center bg-gray-700 rounded">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-orange-400 mb-1">8</div>
+          <div class="text-sm text-gray-400">Units</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Tabs for subsections -->
+  <div class="flex border-b border-gray-600 mb-6 overflow-x-auto">
+    <div 
+      class="tab-button mr-6 pb-2 whitespace-nowrap cursor-pointer border-b-2 border-blue-400 font-medium text-blue-400" 
+      data-tab="service" onclick="switchTab('service')"
+    >
+      Service Models
+    </div>
+    <div 
+      class="tab-button mr-6 pb-2 whitespace-nowrap cursor-pointer text-gray-400" 
+      data-tab="environments" onclick="switchTab('environments')"
+    >
+      Environments
+    </div>
+    <div 
+      class="tab-button mr-6 pb-2 whitespace-nowrap cursor-pointer text-gray-400" 
+      data-tab="tools" onclick="switchTab('tools')"
+    >
+      Tools & Apps
+    </div>
+    <div 
+      class="tab-button mr-6 pb-2 whitespace-nowrap cursor-pointer text-gray-400" 
+      data-tab="integration" onclick="switchTab('integration')"
+    >
+      Solution Integration
+    </div>
+    <div 
+      class="tab-button mr-6 pb-2 whitespace-nowrap cursor-pointer text-gray-400" 
+      data-tab="best" onclick="switchTab('best')"
+    >
+      Best Practices
+    </div>
+  </div>
+  
+  <!-- Service Models Tab -->
+  <div id="tab-service" class="tab-content">
+    <!-- Technology Request Modal (Initially Hidden) -->
+    <div id="request-form-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+      <div class="bg-gray-800 rounded-lg border border-gray-700 p-6 max-w-2xl w-full mx-4 max-h-96 overflow-y-auto">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-lg font-medium text-gray-200">Request New Technology/Software</h3>
+          <button onclick="closeRequestForm()" class="text-gray-400 hover:text-gray-200">✕</button>
+        </div>
+        
+        <form class="space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-300 mb-1">Requestor Name</label>
+              <input type="text" class="w-full border border-gray-600 rounded-lg px-3 py-2 text-sm bg-gray-700 text-gray-200 placeholder-gray-400" placeholder="Enter your name" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-300 mb-1">Team/SDU</label>
+              <select class="w-full border border-gray-600 rounded-lg px-3 py-2 text-sm bg-gray-700 text-gray-200">
+                <option>Select your team</option>
+                <option>Cassiopeia</option>
+                <option>Orion</option>
+                <option>Hydra</option>
+                <option>Centaurus</option>
+                <option>Phoenix</option>
+              </select>
+            </div>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-1">Technology/Software Name</label>
+            <input type="text" class="w-full border border-gray-600 rounded-lg px-3 py-2 text-sm bg-gray-700 text-gray-200 placeholder-gray-400" placeholder="Enter technology or software name" />
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-1">Type of Request</label>
+            <select class="w-full border border-gray-600 rounded-lg px-3 py-2 text-sm bg-gray-700 text-gray-200">
+              <option>Select type</option>
+              <option>New Software Tool</option>
+              <option>API Access</option>
+              <option>Cloud Service</option>
+              <option>Development Framework</option>
+              <option>Data Platform</option>
+              <option>Other</option>
+            </select>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-1">Business Justification</label>
+            <textarea class="w-full border border-gray-600 rounded-lg px-3 py-2 text-sm bg-gray-700 text-gray-200 placeholder-gray-400" rows="4" placeholder="Explain why this technology is needed and how it will benefit your project/team"></textarea>
+          </div>
+          
+          <div class="flex justify-end space-x-3 pt-4">
+            <button type="button" onclick="closeRequestForm()" class="border border-gray-600 text-gray-300 py-2 px-4 rounded text-sm hover:bg-gray-700">Cancel</button>
+            <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded text-sm hover:bg-blue-700">Submit Request</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="bg-gray-800 rounded-lg border border-gray-700 p-4 mb-6">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="font-medium text-gray-200">Service Model Selection</h3>
+        <button onclick="showRequestForm()" class="bg-blue-600 text-white py-2 px-4 rounded text-sm hover:bg-blue-700">+ Request New Technology</button>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="border border-blue-600 bg-blue-900 rounded-lg p-4">
+          <h4 class="font-medium mb-2 text-center text-blue-200">Full-Service Model</h4>
+          <ul class="space-y-2 text-sm mb-4">
+            <li class="flex items-center">
+              <span class="text-blue-400 mr-2">✓</span>
+              <span class="text-blue-300">Complete DevOps team support</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-blue-400 mr-2">✓</span>
+              <span class="text-blue-300">End-to-end development lifecycle</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-blue-400 mr-2">✓</span>
+              <span class="text-blue-300">Ideal for teams without technical expertise</span>
+            </li>
+          </ul>
+          <div class="flex justify-center">
+            <div class="bg-blue-600 text-white py-2 px-4 rounded text-sm cursor-pointer hover:bg-blue-700">Learn More</div>
+          </div>
+        </div>
+        <div class="border border-purple-600 bg-purple-900 rounded-lg p-4">
+          <h4 class="font-medium mb-2 text-center text-purple-200">Self-Service Model</h4>
+          <ul class="space-y-2 text-sm mb-4">
+            <li class="flex items-center">
+              <span class="text-purple-400 mr-2">✓</span>
+              <span class="text-purple-300">Access to best practices and resources</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-purple-400 mr-2">✓</span>
+              <span class="text-purple-300">Technical support when needed</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-purple-400 mr-2">✓</span>
+              <span class="text-purple-300">For teams with existing technical capabilities</span>
+            </li>
+          </ul>
+          <div class="flex justify-center">
+            <div class="bg-purple-600 text-white py-2 px-4 rounded text-sm cursor-pointer hover:bg-purple-700">Learn More</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Environments Tab -->
+  <div id="tab-environments" class="tab-content hidden">
+    <div class="bg-gray-800 rounded-lg border border-gray-700 p-4 mb-6">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="font-medium text-gray-200">Available Environments</h3>
+        <button onclick="showRequestForm()" class="bg-blue-600 text-white py-2 px-4 rounded text-sm hover:bg-blue-700">+ Request New Technology</button>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="border border-gray-600 rounded-lg p-4 hover:bg-gray-700">
+          <div class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+              <div class="bg-blue-800 p-2 rounded-full mr-3">
+                <span class="text-blue-300">🖥️</span>
+              </div>
+              <h4 class="font-medium text-gray-200">DEV1</h4>
+            </div>
+            <div class="bg-green-800 text-green-200 px-2 py-1 rounded-full text-xs">Available</div>
+          </div>
+          <p class="text-sm text-gray-400 mb-3">
+            Primary development environment for new features and code. Unrestricted access for developers with standard development tools pre-installed.
+          </p>
+          <div class="grid grid-cols-2 text-xs text-gray-500 gap-2 mb-3">
+            <div><span class="font-medium">Location:</span> US-East</div>
+            <div><span class="font-medium">Network:</span> Non-Restricted</div>
+            <div><span class="font-medium">Uptime:</span> 99.7%</div>
+            <div><span class="font-medium">Security Level:</span> Low</div>
+          </div>
+          <div class="text-blue-400 text-sm cursor-pointer">Access Environment</div>
+        </div>
+
+        <div class="border border-gray-600 rounded-lg p-4 hover:bg-gray-700">
+          <div class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+              <div class="bg-blue-800 p-2 rounded-full mr-3">
+                <span class="text-blue-300">🖥️</span>
+              </div>
+              <h4 class="font-medium text-gray-200">DEV2</h4>
+            </div>
+            <div class="bg-green-800 text-green-200 px-2 py-1 rounded-full text-xs">Available</div>
+          </div>
+          <p class="text-sm text-gray-400 mb-3">
+            Secondary development environment optimized for integration testing. Features mirror production configurations for testing deployment readiness.
+          </p>
+          <div class="grid grid-cols-2 text-xs text-gray-500 gap-2 mb-3">
+            <div><span class="font-medium">Location:</span> US-East</div>
+            <div><span class="font-medium">Network:</span> Non-Restricted</div>
+            <div><span class="font-medium">Uptime:</span> 99.8%</div>
+            <div><span class="font-medium">Security Level:</span> Medium</div>
+          </div>
+          <div class="text-blue-400 text-sm cursor-pointer">Access Environment</div>
+        </div>
+
+        <div class="border border-gray-600 rounded-lg p-4 hover:bg-gray-700">
+          <div class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+              <div class="bg-yellow-800 p-2 rounded-full mr-3">
+                <span class="text-yellow-300">🔒</span>
+              </div>
+              <h4 class="font-medium text-gray-200">SC (Security & Compliance)</h4>
+            </div>
+            <div class="bg-yellow-800 text-yellow-200 px-2 py-1 rounded-full text-xs">Maintenance</div>
+          </div>
+          <p class="text-sm text-gray-400 mb-3">
+            Dedicated environment for security testing and compliance validation. Configured with enhanced security monitoring and scanning tools.
+          </p>
+          <div class="grid grid-cols-2 text-xs text-gray-500 gap-2 mb-3">
+            <div><span class="font-medium">Location:</span> US-Central</div>
+            <div><span class="font-medium">Network:</span> Restricted</div>
+            <div><span class="font-medium">Uptime:</span> 97.5%</div>
+            <div><span class="font-medium">Security Level:</span> High</div>
+          </div>
+          <div class="text-blue-400 text-sm cursor-pointer">Access Environment</div>
+        </div>
+
+        <div class="border border-gray-600 rounded-lg p-4 hover:bg-gray-700">
+          <div class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+              <div class="bg-purple-800 p-2 rounded-full mr-3">
+                <span class="text-purple-300">🧪</span>
+              </div>
+              <h4 class="font-medium text-gray-200">TS (Test & Staging)</h4>
+            </div>
+            <div class="bg-green-800 text-green-200 px-2 py-1 rounded-full text-xs">Available</div>
+          </div>
+          <p class="text-sm text-gray-400 mb-3">
+            Pre-production environment for final testing and staging. Mirrors production infrastructure and configurations for deployment validation.
+          </p>
+          <div class="grid grid-cols-2 text-xs text-gray-500 gap-2 mb-3">
+            <div><span class="font-medium">Location:</span> US-West</div>
+            <div><span class="font-medium">Network:</span> Semi-Restricted</div>
+            <div><span class="font-medium">Uptime:</span> 99.8%</div>
+            <div><span class="font-medium">Security Level:</span> High</div>
+          </div>
+          <div class="text-blue-400 text-sm cursor-pointer">Access Environment</div>
+        </div>
+
+        <div class="border border-gray-600 rounded-lg p-4 hover:bg-gray-700">
+          <div class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+              <div class="bg-red-800 p-2 rounded-full mr-3">
+                <span class="text-red-300">🚀</span>
+              </div>
+              <h4 class="font-medium text-gray-200">PROD (Production)</h4>
+            </div>
+            <div class="bg-green-800 text-green-200 px-2 py-1 rounded-full text-xs">Available</div>
+          </div>
+          <p class="text-sm text-gray-400 mb-3">
+            Live production environment with strict access controls. Highly optimized for performance, reliability, and security with full monitoring.
+          </p>
+          <div class="grid grid-cols-2 text-xs text-gray-500 gap-2 mb-3">
+            <div><span class="font-medium">Location:</span> Multi-Region</div>
+            <div><span class="font-medium">Network:</span> Highly Restricted</div>
+            <div><span class="font-medium">Uptime:</span> 99.99%</div>
+            <div><span class="font-medium">Security Level:</span> Maximum</div>
+          </div>
+          <div class="text-blue-400 text-sm cursor-pointer">Access Environment</div>
+        </div>
+
+        <div class="border border-gray-600 rounded-lg p-4 hover:bg-gray-700">
+          <div class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+              <div class="bg-green-800 p-2 rounded-full mr-3">
+                <span class="text-green-300">🔬</span>
+              </div>
+              <h4 class="font-medium text-gray-200">ML-LAB (Machine Learning)</h4>
+            </div>
+            <div class="bg-green-800 text-green-200 px-2 py-1 rounded-full text-xs">Available</div>
+          </div>
+          <p class="text-sm text-gray-400 mb-3">
+            Specialized environment for ML model development and training. Equipped with high-performance computing resources and ML frameworks.
+          </p>
+          <div class="grid grid-cols-2 text-xs text-gray-500 gap-2 mb-3">
+            <div><span class="font-medium">Location:</span> US-East</div>
+            <div><span class="font-medium">Network:</span> Research Network</div>
+            <div><span class="font-medium">Uptime:</span> 98.5%</div>
+            <div><span class="font-medium">Security Level:</span> Medium</div>
+          </div>
+          <div class="text-blue-400 text-sm cursor-pointer">Access Environment</div>
+        </div>
+      </div>
+
+      <div class="bg-blue-900 border border-blue-600 rounded-lg p-4">
+        <h4 class="font-medium mb-2 text-blue-200">Environment Access Request</h4>
+        <p class="text-sm text-blue-300 mb-3">
+          Need access to a specific environment for your project? Submit an access request with project justification and required access level.
+        </p>
+        <button class="bg-blue-600 text-white py-2 px-4 rounded text-sm hover:bg-blue-700">Request Environment Access</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tools & Apps Tab -->
+  <div id="tab-tools" class="tab-content hidden">
+    <!-- Tools Section -->
+    <div class="bg-gray-800 rounded-lg border border-gray-700 p-4 mb-6">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="font-medium text-gray-200">Development Tools</h3>
+        <button onclick="showRequestForm()" class="bg-blue-600 text-white py-2 px-4 rounded text-sm hover:bg-blue-700">+ Request New Technology</button>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div class="border border-gray-600 rounded-lg p-4 hover:bg-gray-700">
+          <div class="flex items-center mb-3">
+            <div class="bg-blue-800 p-2 rounded-full mr-3">
+              <span class="text-blue-300">⚙️</span>
+            </div>
+            <h4 class="font-medium text-gray-200">Kubernetes Cluster</h4>
+          </div>
+          <p class="text-sm text-gray-400 mb-3">
+            Container orchestration platform for deploying and managing containerized applications.
+          </p>
+          <div class="flex justify-between items-center text-xs">
+            <span class="bg-green-800 text-green-200 px-2 py-1 rounded-full">Available</span>
+            <span class="text-gray-500">v1.25.4</span>
+          </div>
+          <div class="mt-3 text-blue-400 text-sm cursor-pointer">Access Tool</div>
+        </div>
+
+        <div class="border border-gray-600 rounded-lg p-4 hover:bg-gray-700">
+          <div class="flex items-center mb-3">
+            <div class="bg-purple-800 p-2 rounded-full mr-3">
+              <span class="text-purple-300">🤖</span>
+            </div>
+            <h4 class="font-medium text-gray-200">LLM Store</h4>
+          </div>
+          <p class="text-sm text-gray-400 mb-3">
+            Repository of pre-trained language models for AI applications with version control.
+          </p>
+          <div class="flex justify-between items-center text-xs">
+            <span class="bg-green-800 text-green-200 px-2 py-1 rounded-full">Available</span>
+            <span class="text-gray-500">2.3.1</span>
+          </div>
+          <div class="mt-3 text-blue-400 text-sm cursor-pointer">Access Tool</div>
+        </div>
+
+        <div class="border border-gray-600 rounded-lg p-4 hover:bg-gray-700">
+          <div class="flex items-center mb-3">
+            <div class="bg-green-800 p-2 rounded-full mr-3">
+              <span class="text-green-300">📊</span>
+            </div>
+            <h4 class="font-medium text-gray-200">ML Feature Store</h4>
+          </div>
+          <p class="text-sm text-gray-400 mb-3">
+            Centralized repository for storing, managing, and serving machine learning features.
+          </p>
+          <div class="flex justify-between items-center text-xs">
+            <span class="bg-green-800 text-green-200 px-2 py-1 rounded-full">Available</span>
+            <span class="text-gray-500">1.8.0</span>
+          </div>
+          <div class="mt-3 text-blue-400 text-sm cursor-pointer">Access Tool</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Solution Integration Tab -->
+  <div id="tab-integration" class="tab-content hidden">
+    <div class="bg-gray-800 rounded-lg border border-gray-700 p-4 mb-6">
+      <h3 class="font-medium mb-4 text-gray-200">Solution Integration Metrics</h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <!-- Security Integration Metrics -->
+        <div class="border border-red-600 bg-gray-800 rounded-lg p-4">
+          <h4 class="font-medium text-red-400 mb-3">Security Integration</h4>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-sm text-gray-300">ATO Processing Time</span>
+                <span class="text-sm text-gray-300">14.2 days</span>
+              </div>
+              <div class="w-full bg-gray-600 rounded-full h-2">
+                <div class="bg-green-500 h-2 rounded-full" style="width: 70%"></div>
+              </div>
+              <div class="flex justify-between text-xs text-gray-400 mt-1">
+                <span>Target: 10 days</span>
+                <span>-30% YoY</span>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-sm text-gray-300">Security Controls</span>
+                <span class="text-sm text-gray-300">92% automated</span>
+              </div>
+              <div class="w-full bg-gray-600 rounded-full h-2">
+                <div class="bg-green-500 h-2 rounded-full" style="width: 92%"></div>
+              </div>
+              <div class="flex justify-between text-xs text-gray-400 mt-1">
+                <span>Target: 95%</span>
+                <span>+15% YoY</span>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-sm text-gray-300">Vulnerability Scanning</span>
+                <span class="text-sm text-gray-300">3.1 hours</span>
+              </div>
+              <div class="w-full bg-gray-600 rounded-full h-2">
+                <div class="bg-yellow-500 h-2 rounded-full" style="width: 60%"></div>
+              </div>
+              <div class="flex justify-between text-xs text-gray-400 mt-1">
+                <span>Target: 1 hour</span>
+                <span>-45% YoY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Deployment Integration Metrics -->
+        <div class="border border-blue-600 bg-gray-800 rounded-lg p-4">
+          <h4 class="font-medium text-blue-400 mb-3">Deployment Integration</h4>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-sm text-gray-300">CI/CD Success Rate</span>
+                <span class="text-sm text-gray-300">97.8%</span>
+              </div>
+              <div class="w-full bg-gray-600 rounded-full h-2">
+                <div class="bg-green-500 h-2 rounded-full" style="width: 97.8%"></div>
+              </div>
+              <div class="flex justify-between text-xs text-gray-400 mt-1">
+                <span>Target: 99%</span>
+                <span>+3.2% YoY</span>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-sm text-gray-300">Automated Deployments</span>
+                <span class="text-sm text-gray-300">87%</span>
+              </div>
+              <div class="w-full bg-gray-600 rounded-full h-2">
+                <div class="bg-green-500 h-2 rounded-full" style="width: 87%"></div>
+              </div>
+              <div class="flex justify-between text-xs text-gray-400 mt-1">
+                <span>Target: 95%</span>
+                <span>+22% YoY</span>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-sm text-gray-300">Rollback Time</span>
+                <span class="text-sm text-gray-300">8.4 minutes</span>
+              </div>
+              <div class="w-full bg-gray-600 rounded-full h-2">
+                <div class="bg-green-500 h-2 rounded-full" style="width: 85%"></div>
+              </div>
+              <div class="flex justify-between text-xs text-gray-400 mt-1">
+                <span>Target: 5 minutes</span>
+                <span>-60% YoY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- User Environment Integration -->
+        <div class="border border-green-600 bg-gray-800 rounded-lg p-4">
+          <h4 class="font-medium text-green-400 mb-3">User Environment Integration</h4>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-sm text-gray-300">Workflow Integration</span>
+                <span class="text-sm text-gray-300">83%</span>
+              </div>
+              <div class="w-full bg-gray-600 rounded-full h-2">
+                <div class="bg-yellow-500 h-2 rounded-full" style="width: 83%"></div>
+              </div>
+              <div class="flex justify-between text-xs text-gray-400 mt-1">
+                <span>Target: 90%</span>
+                <span>+18% YoY</span>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-sm text-gray-300">Data Interoperability</span>
+                <span class="text-sm text-gray-300">94.2%</span>
+              </div>
+              <div class="w-full bg-gray-600 rounded-full h-2">
+                <div class="bg-green-500 h-2 rounded-full" style="width: 94.2%"></div>
+              </div>
+              <div class="flex justify-between text-xs text-gray-400 mt-1">
+                <span>Target: 95%</span>
+                <span>+7% YoY</span>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-sm text-gray-300">User Training</span>
+                <span class="text-sm text-gray-300">76%</span>
+              </div>
+              <div class="w-full bg-gray-600 rounded-full h-2">
+                <div class="bg-yellow-500 h-2 rounded-full" style="width: 76%"></div>
+              </div>
+              <div class="flex justify-between text-xs text-gray-400 mt-1">
+                <span>Target: 90%</span>
+                <span>+25% YoY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Solution Integration Context Block -->
+      <div class="bg-purple-900 border border-purple-700 rounded-lg p-4">
+        <div class="flex items-start">
+          <div class="bg-purple-800 rounded-full p-2 mr-3 flex-shrink-0">
+            <span class="text-purple-300">📊</span>
+          </div>
+          <div>
+            <h4 class="font-medium text-purple-200 mb-2">PdOM Context: Solution Integration</h4>
+            <p class="text-sm text-purple-300 mb-2">
+              These metrics track our effectiveness in the Solution Integration phase of the PdOM process. This phase focuses on:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+              <div class="bg-purple-800 p-2 rounded">
+                <p class="text-xs text-purple-200 font-medium">Security Integration</p>
+                <p class="text-xs text-purple-300">Embedding security with zero-trust principles and automated ATO processes</p>
+              </div>
+              <div class="bg-purple-800 p-2 rounded">
+                <p class="text-xs text-purple-200 font-medium">Solution Integration</p>
+                <p class="text-xs text-purple-300">Ensuring seamless fit with existing workflows, systems, and datasets</p>
+              </div>
+              <div class="bg-purple-800 p-2 rounded">
+                <p class="text-xs text-purple-200 font-medium">Operationalization</p>
+                <p class="text-xs text-purple-300">Deploying the solution into the live user environment with proper support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Best Practices Tab -->
+  <div id="tab-best" class="tab-content hidden">
+    <div class="bg-gray-800 rounded-lg border border-gray-700 p-4 mb-6">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="font-medium text-gray-200">Technology Best Practices</h3>
+        <button onclick="showRequestForm()" class="bg-blue-600 text-white py-2 px-4 rounded text-sm hover:bg-blue-700">+ Request New Technology</button>
+      </div>
+      
+      <!-- Environment Best Practices -->
+      <div class="mb-6">
+        <h4 class="text-md font-medium text-blue-400 mb-3">Environment Usage Best Practices</h4>
+        <div class="space-y-4">
+          <div class="border border-gray-600 rounded-lg p-4 hover:bg-gray-700">
+            <div class="flex items-start">
+              <div class="bg-blue-800 p-2 rounded-full mr-3">
+                <span class="text-blue-300">1</span>
+              </div>
+              <div>
+                <h5 class="font-medium mb-1 text-gray-200">Environment Selection</h5>
+                <p class="text-sm text-gray-400">
+                  Always select the appropriate environment for your development phase. Use DEV environments for development, SC for security testing, and TS for pre-production validation.
+                </p>
+                <div class="mt-2 bg-blue-900 p-2 rounded text-xs text-blue-300">
+                  <strong>Tip:</strong> Match your environment to your current development phase to ensure proper resource allocation and security compliance.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-gray-600 rounded-lg p-4 hover:bg-gray-700">
+            <div class="flex items-start">
+              <div class="bg-blue-800 p-2 rounded-full mr-3">
+                <span class="text-blue-300">2</span>
+              </div>
+              <div>
+                <h5 class="font-medium mb-1 text-gray-200">Resource Management</h5>
+                <p class="text-sm text-gray-400">
+                  Practice efficient resource management by cleaning up unused resources and optimizing workloads. Release compute resources when not actively developing.
+                </p>
+                <div class="mt-2 bg-blue-900 p-2 rounded text-xs text-blue-300">
+                  <strong>Tip:</strong> Set up automated resource cleanup tasks to prevent resource wastage and reduce costs.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Virtual Assistant Link -->
+  <div data-react-component="VirtualAssistantLink" 
+       data-props='{"title":"Need technical support?","description":"Ask the Virtual Assistant about environments, tools, or applications"}'></div>
+</div>
+
+<script>
+// Tab switching functionality
+function switchTab(tabId) {
+  // Hide all tab content
+  document.querySelectorAll('.tab-content').forEach(content => {
+    content.classList.add('hidden');
+  });
+  
+  // Reset all tab buttons
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.classList.remove('border-blue-400', 'font-medium', 'text-blue-400');
+    button.classList.add('text-gray-400');
+  });
+  
+  // Show selected tab content
+  document.getElementById('tab-' + tabId).classList.remove('hidden');
+  
+  // Highlight selected tab button
+  const selectedButton = document.querySelector(`[data-tab="${tabId}"]`);
+  selectedButton.classList.remove('text-gray-400');
+  selectedButton.classList.add('border-blue-400', 'font-medium', 'text-blue-400');
+}
+
+// Request form functions
+function showRequestForm() {
+  document.getElementById('request-form-modal').classList.remove('hidden');
+}
+
+function closeRequestForm() {
+  document.getElementById('request-form-modal').classList.add('hidden');
+}
+
+// Initialize page
+document.addEventListener('DOMContentLoaded', function() {
+  // Show service tab by default
+  switchTab('service');
+  
+  // Close modal when clicking outside
+  document.getElementById('request-form-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeRequestForm();
+    }
+  });
+});
+</script>

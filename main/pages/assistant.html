@@ -1,0 +1,389 @@
+<div class="page-content">
+  <h2 class="text-xl font-medium mb-6 text-white">Virtual Assistant</h2>
+  
+  <!-- Assistant Interface -->
+  <div class="bg-gray-800 rounded-lg border border-gray-700 p-4 mb-6">
+    <div class="flex items-center mb-4">
+      <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+        <span class="text-white">🤖</span>
+      </div>
+      <div>
+        <h3 class="font-medium text-gray-200">Milano Labs Assistant</h3>
+        <p class="text-sm text-gray-400">Your AI-powered guide to Milano Labs processes and procedures</p>
+      </div>
+    </div>
+    
+    <!-- Chat Interface -->
+    <div class="bg-gray-900 rounded-lg border border-gray-600 h-96 flex flex-col">
+      <!-- Chat Messages Area -->
+      <div id="chat-messages" class="flex-1 p-4 overflow-y-auto custom-scrollbar">
+        <!-- Welcome Message -->
+        <div class="flex items-start mb-4">
+          <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+            <span class="text-white text-sm">🤖</span>
+          </div>
+          <div class="bg-gray-700 rounded-lg p-3 max-w-xs">
+            <p class="text-sm text-gray-200">
+              Hello! I'm your Milano Labs Assistant. I can help you with information about our processes, procedures, and systems. What would you like to know?
+            </p>
+          </div>
+        </div>
+        
+        <!-- Quick Suggestions -->
+        <div class="flex flex-wrap gap-2 mb-4">
+          <button class="suggestion-btn" onclick="sendQuickMessage('How do I start the ATO process?')">
+            How do I start the ATO process?
+          </button>
+          <button class="suggestion-btn" onclick="sendQuickMessage('What are the acquisition requirements?')">
+            What are the acquisition requirements?
+          </button>
+          <button class="suggestion-btn" onclick="sendQuickMessage('Show me security policies')">
+            Show me security policies
+          </button>
+          <button class="suggestion-btn" onclick="sendQuickMessage('Explain the software development process')">
+            Explain the software development process
+          </button>
+        </div>
+      </div>
+      
+      <!-- Chat Input Area -->
+      <div class="border-t border-gray-600 p-4">
+        <div class="flex space-x-2">
+          <input 
+            type="text" 
+            id="chat-input" 
+            placeholder="Ask me anything about Milano Labs processes..."
+            class="flex-1 bg-gray-700 text-gray-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            onkeypress="handleKeyPress(event)"
+          />
+          <button 
+            onclick="sendMessage()"
+            class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Send
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Assistant Capabilities -->
+  <div class="bg-gray-800 rounded-lg border border-gray-700 p-4 mb-6">
+    <h3 class="font-medium mb-4 text-gray-200">What I Can Help With</h3>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="space-y-3">
+        <div class="flex items-start">
+          <span class="mr-3 mt-1">🔒</span>
+          <div>
+            <h4 class="font-medium text-gray-200 text-sm">ATO Process</h4>
+            <p class="text-xs text-gray-400">Authority to Operate requirements, timelines, and procedures</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start">
+          <span class="mr-3 mt-1">💰</span>
+          <div>
+            <h4 class="font-medium text-gray-200 text-sm">Acquisitions</h4>
+            <p class="text-xs text-gray-400">Procurement processes, vendor evaluation, and contracting</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start">
+          <span class="mr-3 mt-1">🛡️</span>
+          <div>
+            <h4 class="font-medium text-gray-200 text-sm">Security Policies</h4>
+            <p class="text-xs text-gray-400">Security guidelines, compliance requirements, and best practices</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start">
+          <span class="mr-3 mt-1">💻</span>
+          <div>
+            <h4 class="font-medium text-gray-200 text-sm">Software Development</h4>
+            <p class="text-xs text-gray-400">Development lifecycle, coding standards, and deployment procedures</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-3">
+        <div class="flex items-start">
+          <span class="mr-3 mt-1">👥</span>
+          <div>
+            <h4 class="font-medium text-gray-200 text-sm">Teams & Roles</h4>
+            <p class="text-xs text-gray-400">Team structures, responsibilities, and contact information</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start">
+          <span class="mr-3 mt-1">🔧</span>
+          <div>
+            <h4 class="font-medium text-gray-200 text-sm">Technology</h4>
+            <p class="text-xs text-gray-400">Tech stack, tools, environments, and infrastructure</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start">
+          <span class="mr-3 mt-1">📊</span>
+          <div>
+            <h4 class="font-medium text-gray-200 text-sm">Metrics & KPIs</h4>
+            <p class="text-xs text-gray-400">Performance indicators, dashboards, and reporting</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start">
+          <span class="mr-3 mt-1">📋</span>
+          <div>
+            <h4 class="font-medium text-gray-200 text-sm">Documentation</h4>
+            <p class="text-xs text-gray-400">Process documents, templates, and reference materials</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Recent Conversations -->
+  <div class="bg-gray-800 rounded-lg border border-gray-700 p-4 mb-6">
+    <h3 class="font-medium mb-4 text-gray-200">Recent Conversations</h3>
+    <div class="space-y-3">
+      <div class="bg-gray-700 rounded-lg p-3 hover:bg-gray-600 cursor-pointer transition-colors">
+        <div class="flex items-center justify-between">
+          <div>
+            <h4 class="font-medium text-gray-200 text-sm">ATO Timeline for Customer Portal</h4>
+            <p class="text-xs text-gray-400">Discussed ATO requirements and expected timeline</p>
+            <p class="text-xs text-gray-500">2 hours ago</p>
+          </div>
+          <span class="text-blue-400 text-sm">Continue</span>
+        </div>
+      </div>
+      
+      <div class="bg-gray-700 rounded-lg p-3 hover:bg-gray-600 cursor-pointer transition-colors">
+        <div class="flex items-center justify-between">
+          <div>
+            <h4 class="font-medium text-gray-200 text-sm">Security Policy Updates</h4>
+            <p class="text-xs text-gray-400">Asked about recent changes to data protection policies</p>
+            <p class="text-xs text-gray-500">1 day ago</p>
+          </div>
+          <span class="text-blue-400 text-sm">Continue</span>
+        </div>
+      </div>
+      
+      <div class="bg-gray-700 rounded-lg p-3 hover:bg-gray-600 cursor-pointer transition-colors">
+        <div class="flex items-center justify-between">
+          <div>
+            <h4 class="font-medium text-gray-200 text-sm">Vendor Evaluation Process</h4>
+            <p class="text-xs text-gray-400">Explained steps for evaluating new software vendors</p>
+            <p class="text-xs text-gray-500">3 days ago</p>
+          </div>
+          <span class="text-blue-400 text-sm">Continue</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Quick Actions -->
+  <div class="bg-gray-800 rounded-lg border border-gray-700 p-4 mb-6">
+    <h3 class="font-medium mb-4 text-gray-200">Quick Actions</h3>
+    <div class="grid grid-cols-3 gap-3">
+      <button class="bg-gray-700 hover:bg-gray-600 rounded-lg p-3 text-left transition-colors" onclick="sendQuickMessage('Find ATO templates')">
+        <div class="text-lg mb-1">📋</div>
+        <h4 class="font-medium text-gray-200 text-sm">Find Templates</h4>
+        <p class="text-xs text-gray-400">Get document templates</p>
+      </button>
+      
+      <button class="bg-gray-700 hover:bg-gray-600 rounded-lg p-3 text-left transition-colors" onclick="sendQuickMessage('Show me security alerts')">
+        <div class="text-lg mb-1">🚨</div>
+        <h4 class="font-medium text-gray-200 text-sm">Security Status</h4>
+        <p class="text-xs text-gray-400">Check security alerts</p>
+      </button>
+      
+      <button class="bg-gray-700 hover:bg-gray-600 rounded-lg p-3 text-left transition-colors" onclick="sendQuickMessage('Who do I contact for support?')">
+        <div class="text-lg mb-1">👥</div>
+        <h4 class="font-medium text-gray-200 text-sm">Contact Info</h4>
+        <p class="text-xs text-gray-400">Find team contacts</p>
+      </button>
+      
+      <button class="bg-gray-700 hover:bg-gray-600 rounded-lg p-3 text-left transition-colors" onclick="sendQuickMessage('What is the current sprint status?')">
+        <div class="text-lg mb-1">🏃</div>
+        <h4 class="font-medium text-gray-200 text-sm">Sprint Status</h4>
+        <p class="text-xs text-gray-400">Development progress</p>
+      </button>
+      
+      <button class="bg-gray-700 hover:bg-gray-600 rounded-lg p-3 text-left transition-colors" onclick="sendQuickMessage('Show deployment process')">
+        <div class="text-lg mb-1">🚀</div>
+        <h4 class="font-medium text-gray-200 text-sm">Deployment Guide</h4>
+        <p class="text-xs text-gray-400">Release procedures</p>
+      </button>
+      
+      <button class="bg-gray-700 hover:bg-gray-600 rounded-lg p-3 text-left transition-colors" onclick="sendQuickMessage('Explain compliance requirements')">
+        <div class="text-lg mb-1">✅</div>
+        <h4 class="font-medium text-gray-200 text-sm">Compliance Info</h4>
+        <p class="text-xs text-gray-400">Regulatory requirements</p>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Assistant Settings -->
+  <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+    <h3 class="font-medium mb-4 text-gray-200">Assistant Settings</h3>
+    <div class="space-y-3">
+      <div class="flex items-center justify-between">
+        <span class="text-sm text-gray-300">Detailed Responses</span>
+        <input type="checkbox" checked class="rounded">
+      </div>
+      <div class="flex items-center justify-between">
+        <span class="text-sm text-gray-300">Include Related Links</span>
+        <input type="checkbox" checked class="rounded">
+      </div>
+      <div class="flex items-center justify-between">
+        <span class="text-sm text-gray-300">Conversation History</span>
+        <input type="checkbox" checked class="rounded">
+      </div>
+      <div class="flex items-center justify-between">
+        <span class="text-sm text-gray-300">Notification Alerts</span>
+        <input type="checkbox" class="rounded">
+      </div>
+    </div>
+    
+    <div class="mt-4 pt-4 border-t border-gray-600">
+      <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm transition-colors">
+        Clear Conversation History
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+.suggestion-btn {
+  background: rgb(55 65 81);
+  color: rgb(209 213 219);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  border: 1px solid rgb(75 85 99);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.suggestion-btn:hover {
+  background: rgb(75 85 99);
+  border-color: rgb(96 165 250);
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(75 85 99) rgb(31 41 55);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgb(31 41 55);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(75 85 99);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(96 165 250);
+}
+</style>
+
+<script>
+let conversationHistory = [];
+
+function handleKeyPress(event) {
+  if (event.key === 'Enter') {
+    sendMessage();
+  }
+}
+
+function sendMessage() {
+  const input = document.getElementById('chat-input');
+  const message = input.value.trim();
+  
+  if (message) {
+    addUserMessage(message);
+    input.value = '';
+    
+    // Simulate assistant response
+    setTimeout(() => {
+      addAssistantMessage(generateResponse(message));
+    }, 1000);
+  }
+}
+
+function sendQuickMessage(message) {
+  addUserMessage(message);
+  
+  // Simulate assistant response
+  setTimeout(() => {
+    addAssistantMessage(generateResponse(message));
+  }, 1000);
+}
+
+function addUserMessage(message) {
+  const chatMessages = document.getElementById('chat-messages');
+  const messageDiv = document.createElement('div');
+  messageDiv.className = 'flex items-start mb-4 justify-end';
+  messageDiv.innerHTML = `
+    <div class="bg-blue-600 rounded-lg p-3 max-w-xs">
+      <p class="text-sm text-white">${message}</p>
+    </div>
+    <div class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center ml-3 flex-shrink-0">
+      <span class="text-white text-sm">👤</span>
+    </div>
+  `;
+  chatMessages.appendChild(messageDiv);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function addAssistantMessage(message) {
+  const chatMessages = document.getElementById('chat-messages');
+  const messageDiv = document.createElement('div');
+  messageDiv.className = 'flex items-start mb-4';
+  messageDiv.innerHTML = `
+    <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+      <span class="text-white text-sm">🤖</span>
+    </div>
+    <div class="bg-gray-700 rounded-lg p-3 max-w-xs">
+      <p class="text-sm text-gray-200">${message}</p>
+    </div>
+  `;
+  chatMessages.appendChild(messageDiv);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function generateResponse(userMessage) {
+  const message = userMessage.toLowerCase();
+  
+  if (message.includes('ato') || message.includes('authority to operate')) {
+    return "The ATO process typically takes 6-8 weeks and involves four main stages: Documentation, Security Assessment, Risk Remediation, and Authorization. I can help you understand the specific requirements for your system type. Would you like me to explain any particular stage in detail?";
+  }
+  
+  if (message.includes('acquisition') || message.includes('procurement')) {
+    return "The acquisition process includes Requirements Gathering, Market Research, Vendor Evaluation, and Contract & Implementation. It usually takes 8-12 weeks. I can provide you with templates and help you understand the specific requirements for your project.";
+  }
+  
+  if (message.includes('security') || message.includes('policy')) {
+    return "I can help you with security policies, compliance requirements, and current security status. Our organization maintains SOC 2, ISO 27001, GDPR, and HIPAA compliance. What specific security information do you need?";
+  }
+  
+  if (message.includes('software') || message.includes('development')) {
+    return "The Software Way is our 13-step development process covering everything from planning to deployment. I can explain any phase, help with coding standards, or guide you through our CI/CD pipeline. What aspect interests you most?";
+  }
+  
+  if (message.includes('team') || message.includes('contact')) {
+    return "I can help you find the right team contacts. We have Security Team (security@milano.com), ATO Coordinator (ato@milano.com), and Help Desk (help@milano.com). Who specifically do you need to reach?";
+  }
+  
+  if (message.includes('template') || message.includes('document')) {
+    return "I can help you find templates for various processes including Requirements Templates, Vendor Evaluation Matrix, RFP Templates, Security Plans, and more. What type of document are you looking for?";
+  }
+  
+  return "I understand you're asking about Milano Labs processes. I can provide detailed information about ATO, acquisitions, security, software development, teams, and technology. Could you be more specific about what you'd like to know?";
+}
+</script>

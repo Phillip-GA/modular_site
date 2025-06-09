@@ -1,0 +1,362 @@
+<div class="page-content">
+  <h2 class="text-xl font-medium mb-6 text-white">Security</h2>
+  
+  <!-- Environment Security Status -->
+  <div class="bg-gray-800 rounded-lg border border-gray-700 p-4 mb-6">
+    <h3 class="font-medium mb-4 text-gray-200">Environment Security Status</h3>
+    <div class="overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-600">
+        <thead class="bg-gray-700">
+          <tr>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Environment</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Security Level</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Last Scan</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Vulnerabilities</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Status</th>
+          </tr>
+        </thead>
+        <tbody class="bg-gray-800 divide-y divide-gray-600">
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Production</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">High</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">2 hours ago</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">0 Critical, 2 Medium</td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Secure</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Staging</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">Medium</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">6 hours ago</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">1 Critical, 5 Medium</td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">Attention Required</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Development</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">Medium</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">12 hours ago</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">3 Critical, 8 Medium</td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800">Action Required</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Testing</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">Low</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">1 day ago</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">0 Critical, 3 Medium</td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Secure</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <!-- Security Metrics Dashboard -->
+  <div class="grid grid-cols-4 gap-4 mb-6">
+    <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm text-gray-400">Critical Vulnerabilities</p>
+          <p class="text-2xl font-bold text-red-400">4</p>
+        </div>
+        <div class="text-red-400">🚨</div>
+      </div>
+      <div class="mt-2">
+        <span class="text-xs text-red-300">+2 from last week</span>
+      </div>
+    </div>
+    
+    <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm text-gray-400">Medium Vulnerabilities</p>
+          <p class="text-2xl font-bold text-yellow-400">18</p>
+        </div>
+        <div class="text-yellow-400">⚠️</div>
+      </div>
+      <div class="mt-2">
+        <span class="text-xs text-yellow-300">-3 from last week</span>
+      </div>
+    </div>
+    
+    <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm text-gray-400">Security Score</p>
+          <p class="text-2xl font-bold text-green-400">85%</p>
+        </div>
+        <div class="text-green-400">🛡️</div>
+      </div>
+      <div class="mt-2">
+        <span class="text-xs text-green-300">+5% improvement</span>
+      </div>
+    </div>
+    
+    <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm text-gray-400">Systems Monitored</p>
+          <p class="text-2xl font-bold text-blue-400">12</p>
+        </div>
+        <div class="text-blue-400">👁️</div>
+      </div>
+      <div class="mt-2">
+        <span class="text-xs text-blue-300">All systems active</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Security Policies & Procedures -->
+  <div class="bg-gray-800 rounded-lg border border-gray-700 p-4 mb-6">
+    <h3 class="font-medium mb-4 text-gray-200">Security Policies & Procedures</h3>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="space-y-3">
+        <div class="bg-gray-700 rounded-lg p-3 hover:bg-gray-600 cursor-pointer transition-colors">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <span class="mr-3">📋</span>
+              <div>
+                <h4 class="font-medium text-gray-200">Security Policy Manual</h4>
+                <p class="text-xs text-gray-400">Comprehensive security policies and guidelines</p>
+              </div>
+            </div>
+            <span class="text-blue-400 text-sm">View</span>
+          </div>
+        </div>
+        
+        <div class="bg-gray-700 rounded-lg p-3 hover:bg-gray-600 cursor-pointer transition-colors">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <span class="mr-3">🔒</span>
+              <div>
+                <h4 class="font-medium text-gray-200">Access Control Procedures</h4>
+                <p class="text-xs text-gray-400">User access management and authorization</p>
+              </div>
+            </div>
+            <span class="text-blue-400 text-sm">View</span>
+          </div>
+        </div>
+        
+        <div class="bg-gray-700 rounded-lg p-3 hover:bg-gray-600 cursor-pointer transition-colors">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <span class="mr-3">🚨</span>
+              <div>
+                <h4 class="font-medium text-gray-200">Incident Response Plan</h4>
+                <p class="text-xs text-gray-400">Security incident handling procedures</p>
+              </div>
+            </div>
+            <span class="text-blue-400 text-sm">View</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-3">
+        <div class="bg-gray-700 rounded-lg p-3 hover:bg-gray-600 cursor-pointer transition-colors">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <span class="mr-3">🔐</span>
+              <div>
+                <h4 class="font-medium text-gray-200">Data Protection Guidelines</h4>
+                <p class="text-xs text-gray-400">Data classification and protection measures</p>
+              </div>
+            </div>
+            <span class="text-blue-400 text-sm">View</span>
+          </div>
+        </div>
+        
+        <div class="bg-gray-700 rounded-lg p-3 hover:bg-gray-600 cursor-pointer transition-colors">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <span class="mr-3">📊</span>
+              <div>
+                <h4 class="font-medium text-gray-200">Security Monitoring Procedures</h4>
+                <p class="text-xs text-gray-400">Continuous monitoring and alerting</p>
+              </div>
+            </div>
+            <span class="text-blue-400 text-sm">View</span>
+          </div>
+        </div>
+        
+        <div class="bg-gray-700 rounded-lg p-3 hover:bg-gray-600 cursor-pointer transition-colors">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <span class="mr-3">🎓</span>
+              <div>
+                <h4 class="font-medium text-gray-200">Security Training Materials</h4>
+                <p class="text-xs text-gray-400">Employee security awareness training</p>
+              </div>
+            </div>
+            <span class="text-blue-400 text-sm">View</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Recent Security Alerts -->
+  <div class="bg-gray-800 rounded-lg border border-gray-700 p-4 mb-6">
+    <h3 class="font-medium mb-4 text-gray-200">Recent Security Alerts</h3>
+    <div class="space-y-3">
+      <div class="bg-red-900 border border-red-600 rounded-lg p-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <span class="mr-3">🚨</span>
+            <div>
+              <h4 class="font-medium text-red-200">Critical: SQL Injection Vulnerability Detected</h4>
+              <p class="text-xs text-red-300">Development environment - Immediate action required</p>
+              <p class="text-xs text-red-400">2 hours ago</p>
+            </div>
+          </div>
+          <button class="bg-red-600 text-white px-3 py-1 rounded text-sm hover:bg-red-700">Investigate</button>
+        </div>
+      </div>
+      
+      <div class="bg-yellow-900 border border-yellow-600 rounded-lg p-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <span class="mr-3">⚠️</span>
+            <div>
+              <h4 class="font-medium text-yellow-200">Medium: Outdated SSL Certificate</h4>
+              <p class="text-xs text-yellow-300">Staging environment - Certificate expires in 7 days</p>
+              <p class="text-xs text-yellow-400">6 hours ago</p>
+            </div>
+          </div>
+          <button class="bg-yellow-600 text-white px-3 py-1 rounded text-sm hover:bg-yellow-700">Review</button>
+        </div>
+      </div>
+      
+      <div class="bg-blue-900 border border-blue-600 rounded-lg p-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <span class="mr-3">ℹ️</span>
+            <div>
+              <h4 class="font-medium text-blue-200">Info: Security Scan Completed</h4>
+              <p class="text-xs text-blue-300">Production environment - No new vulnerabilities found</p>
+              <p class="text-xs text-blue-400">12 hours ago</p>
+            </div>
+          </div>
+          <button class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">View Report</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Security Tools & Resources -->
+  <div class="bg-gray-800 rounded-lg border border-gray-700 p-4 mb-6">
+    <h3 class="font-medium mb-4 text-gray-200">Security Tools & Resources</h3>
+    <div class="grid grid-cols-3 gap-4">
+      <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-gray-600 cursor-pointer transition-colors">
+        <div class="text-2xl mb-2">🔍</div>
+        <h4 class="font-medium text-gray-200 mb-1">Vulnerability Scanner</h4>
+        <p class="text-xs text-gray-400">Automated security scanning</p>
+        <button class="mt-2 text-blue-400 hover:text-blue-300 text-sm">Launch Tool</button>
+      </div>
+      
+      <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-gray-600 cursor-pointer transition-colors">
+        <div class="text-2xl mb-2">📊</div>
+        <h4 class="font-medium text-gray-200 mb-1">Security Dashboard</h4>
+        <p class="text-xs text-gray-400">Real-time security monitoring</p>
+        <button class="mt-2 text-blue-400 hover:text-blue-300 text-sm">Open Dashboard</button>
+      </div>
+      
+      <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-gray-600 cursor-pointer transition-colors">
+        <div class="text-2xl mb-2">🔐</div>
+        <h4 class="font-medium text-gray-200 mb-1">Access Management</h4>
+        <p class="text-xs text-gray-400">User permissions and roles</p>
+        <button class="mt-2 text-blue-400 hover:text-blue-300 text-sm">Manage Access</button>
+      </div>
+      
+      <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-gray-600 cursor-pointer transition-colors">
+        <div class="text-2xl mb-2">📋</div>
+        <h4 class="font-medium text-gray-200 mb-1">Compliance Checker</h4>
+        <p class="text-xs text-gray-400">Regulatory compliance status</p>
+        <button class="mt-2 text-blue-400 hover:text-blue-300 text-sm">Check Compliance</button>
+      </div>
+      
+      <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-gray-600 cursor-pointer transition-colors">
+        <div class="text-2xl mb-2">🚨</div>
+        <h4 class="font-medium text-gray-200 mb-1">Incident Manager</h4>
+        <p class="text-xs text-gray-400">Security incident tracking</p>
+        <button class="mt-2 text-blue-400 hover:text-blue-300 text-sm">View Incidents</button>
+      </div>
+      
+      <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-gray-600 cursor-pointer transition-colors">
+        <div class="text-2xl mb-2">📚</div>
+        <h4 class="font-medium text-gray-200 mb-1">Security Training</h4>
+        <p class="text-xs text-gray-400">Employee training portal</p>
+        <button class="mt-2 text-blue-400 hover:text-blue-300 text-sm">Start Training</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Security Compliance Status -->
+  <div class="bg-gray-800 rounded-lg border border-gray-700 p-4 mb-6">
+    <h3 class="font-medium mb-4 text-gray-200">Compliance Status</h3>
+    <div class="space-y-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+          <div>
+            <h4 class="font-medium text-gray-200">SOC 2 Type II</h4>
+            <p class="text-xs text-gray-400">Valid until March 2025</p>
+          </div>
+        </div>
+        <span class="text-green-400 text-sm">Compliant</span>
+      </div>
+      
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+          <div>
+            <h4 class="font-medium text-gray-200">ISO 27001</h4>
+            <p class="text-xs text-gray-400">Valid until August 2025</p>
+          </div>
+        </div>
+        <span class="text-green-400 text-sm">Compliant</span>
+      </div>
+      
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <div class="w-3 h-3 bg-yellow-500 rounded-full mr-3"></div>
+          <div>
+            <h4 class="font-medium text-gray-200">GDPR</h4>
+            <p class="text-xs text-gray-400">Review required for new data processing</p>
+          </div>
+        </div>
+        <span class="text-yellow-400 text-sm">Action Required</span>
+      </div>
+      
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+          <div>
+            <h4 class="font-medium text-gray-200">HIPAA</h4>
+            <p class="text-xs text-gray-400">Annual risk assessment completed</p>
+          </div>
+        </div>
+        <span class="text-green-400 text-sm">Compliant</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Virtual Assistant Link -->
+  <div class="bg-gray-700 text-white p-4 rounded-lg flex items-center justify-between">
+    <div>
+      <h3 class="font-medium mb-1">Security questions or concerns?</h3>
+      <p class="text-sm text-gray-300">Ask the Virtual Assistant about security policies, procedures, or alerts</p>
+    </div>
+    <div class="bg-blue-500 text-white py-2 px-4 rounded cursor-pointer hover:bg-blue-600 transition-colors">
+      <div class="flex items-center">
+        <span class="mr-2">💬</span>
+        <span>Ask Assistant</span>
+      </div>
+    </div>
+  </div>
+</div>
