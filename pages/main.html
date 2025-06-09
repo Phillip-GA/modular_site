@@ -1,0 +1,671 @@
+<div class="page-content">
+  <h2 class="text-xl font-medium mb-6 text-white">Main - User Workflows</h2>
+  
+  <!-- PdOM Process Overview -->
+  <div class="bg-gray-800 rounded-lg border border-gray-700 p-6 mb-6">
+    <h3 class="font-medium mb-4 text-gray-200">Product Operating Model (PdOM) Overview</h3>
+    <p class="text-sm text-gray-300 mb-4">
+      The PdOM is structured around four key phases that form a continuous cycle of mission-driven development. 
+      Each user role contributes essential expertise throughout these phases to ensure solutions deliver real mission impact.
+    </p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+      <div class="bg-blue-900 p-3 rounded-lg border border-blue-700">
+        <div class="text-center mb-2">
+          <div class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center mx-auto">
+            <span class="text-blue-200 font-bold text-sm">1</span>
+          </div>
+          <h4 class="font-medium text-blue-200 mt-1 text-sm">Mission Impact Assessment</h4>
+        </div>
+        <p class="text-xs text-blue-300">Identify customer, define problems, validate requirements</p>
+      </div>
+      <div class="bg-green-900 p-3 rounded-lg border border-green-700">
+        <div class="text-center mb-2">
+          <div class="w-8 h-8 bg-green-700 rounded-full flex items-center justify-center mx-auto">
+            <span class="text-green-200 font-bold text-sm">2</span>
+          </div>
+          <h4 class="font-medium text-green-200 mt-1 text-sm">Rapid Solution Development</h4>
+        </div>
+        <p class="text-xs text-green-300">Define solutions, assess existing tools, build & test iteratively</p>
+      </div>
+      <div class="bg-purple-900 p-3 rounded-lg border border-purple-700">
+        <div class="text-center mb-2">
+          <div class="w-8 h-8 bg-purple-700 rounded-full flex items-center justify-center mx-auto">
+            <span class="text-purple-200 font-bold text-sm">3</span>
+          </div>
+          <h4 class="font-medium text-purple-200 mt-1 text-sm">Solution Integration</h4>
+        </div>
+        <p class="text-xs text-purple-300">Confirm security, integrate solution, operationalize in user environment</p>
+      </div>
+      <div class="bg-orange-900 p-3 rounded-lg border border-orange-700">
+        <div class="text-center mb-2">
+          <div class="w-8 h-8 bg-orange-700 rounded-full flex items-center justify-center mx-auto">
+            <span class="text-orange-200 font-bold text-sm">4</span>
+          </div>
+          <h4 class="font-medium text-orange-200 mt-1 text-sm">Customer Value Assessment</h4>
+        </div>
+        <p class="text-xs text-orange-300">Confirm value, document use case, define next MVP</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- User Role Selector -->
+  <div class="bg-gray-800 rounded-lg border border-gray-700 p-4 mb-6">
+    <h3 class="font-medium mb-4 text-gray-200">Select Your Role for Detailed Workflow</h3>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
+      <button 
+        id="role-pm"
+        onclick="showWorkflow('pm')"
+        class="p-3 rounded-lg border text-left transition-colors bg-blue-900 border-blue-600 text-blue-200"
+      >
+        <div class="font-medium">Product Manager</div>
+        <div class="text-xs text-gray-400">Mission alignment & user focus</div>
+      </button>
+      <button 
+        id="role-tech"
+        onclick="showWorkflow('tech')"
+        class="p-3 rounded-lg border text-left transition-colors bg-gray-700 border-gray-600 text-gray-300 hover:bg-gray-600"
+      >
+        <div class="font-medium">Tech Lead</div>
+        <div class="text-xs text-gray-400">Architecture & technical execution</div>
+      </button>
+      <button 
+        id="role-dev"
+        onclick="showWorkflow('dev')"
+        class="p-3 rounded-lg border text-left transition-colors bg-gray-700 border-gray-600 text-gray-300 hover:bg-gray-600"
+      >
+        <div class="font-medium">Developer</div>
+        <div class="text-xs text-gray-400">Implementation & delivery</div>
+      </button>
+      <button 
+        id="role-ux"
+        onclick="showWorkflow('ux')"
+        class="p-3 rounded-lg border text-left transition-colors bg-gray-700 border-gray-600 text-gray-300 hover:bg-gray-600"
+      >
+        <div class="font-medium">UI/UX Designer</div>
+        <div class="text-xs text-gray-400">User experience & design</div>
+      </button>
+    </div>
+  </div>
+
+  <!-- User-Specific Content -->
+  <div id="workflow-content" class="mb-6">
+    <!-- Product Manager Workflow (Default) -->
+    <div id="workflow-pm" class="workflow-section">
+      <div class="space-y-6">
+        <div class="bg-blue-900 border border-blue-700 rounded-lg p-4">
+          <h3 class="font-medium text-blue-200 mb-3">Your Role in the PdOM Process</h3>
+          <p class="text-sm text-blue-300">
+            As a Product Manager, you are the bridge between mission stakeholders and development teams. You lead customer-focused development, 
+            ensuring solutions align with operational requirements and deliver measurable mission impact.
+          </p>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+          <h4 class="font-medium text-gray-200 mb-4">Phase 1: Mission Impact Assessment</h4>
+          <div class="space-y-4">
+            <div class="border-l-4 border-blue-500 pl-4">
+              <h5 class="font-medium text-blue-400 mb-2">1. Identify Customer</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Engage with key mission users and analysts</li>
+                <li>Conduct proactive research ahead of engagements</li>
+                <li>Embed directly with mission users to understand workflows</li>
+                <li>Create Customer Prioritization Matrix</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">Teams & Roles section to identify stakeholders</span>
+              </div>
+            </div>
+            
+            <div class="border-l-4 border-green-500 pl-4">
+              <h5 class="font-medium text-green-400 mb-2">2. Identify Problem/Opportunity</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Document workflow inefficiencies through direct observation</li>
+                <li>Review real data and observe actual workflows</li>
+                <li>Create Workflow Analysis Report</li>
+                <li>Log user pain points and workarounds</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">Virtual Assistant to research similar problems</span>
+              </div>
+            </div>
+            
+            <div class="border-l-4 border-purple-500 pl-4">
+              <h5 class="font-medium text-purple-400 mb-2">3. Validate Requirements & Mission Impact</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Translate user issues into concrete requirements</li>
+                <li>Confirm operational gains with stakeholders</li>
+                <li>Create Mission Impact Assessment document</li>
+                <li>Maintain cross-functional alignment</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">Technology section for solution assessment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+          <h4 class="font-medium text-gray-200 mb-4">Phase 2: Rapid Solution Development</h4>
+          <div class="space-y-4">
+            <div class="border-l-4 border-green-500 pl-4">
+              <h5 class="font-medium text-green-400 mb-2">4. Define Solutions & Coordinate Development</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Facilitate co-design sessions with users and tech leads</li>
+                <li>Define MVP scope and roadmap</li>
+                <li>Coordinate with Tech Lead and UX Designer</li>
+                <li>Create Iterative Testing Plan</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">The Software Way section for development best practices</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+          <h4 class="font-medium text-gray-200 mb-4">Phase 4: Customer Value Assessment</h4>
+          <div class="space-y-4">
+            <div class="border-l-4 border-orange-500 pl-4">
+              <h5 class="font-medium text-orange-400 mb-2">5. Measure Impact & Plan Next Steps</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Conduct post-deployment check-ins with users</li>
+                <li>Gather both quantitative and qualitative feedback</li>
+                <li>Document full lifecycle and create case studies</li>
+                <li>Define next MVP based on learnings</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">Dashboard metrics to track solution performance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-yellow-900 border border-yellow-600 rounded-lg p-4">
+          <h4 class="font-medium text-yellow-200 mb-2">Key Resources for Product Managers</h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="text-sm">
+              <div class="font-medium text-yellow-300">Teams & Roles</div>
+              <div class="text-yellow-400">→ Org charts, role descriptions, team contacts</div>
+            </div>
+            <div class="text-sm">
+              <div class="font-medium text-yellow-300">Virtual Assistant</div>
+              <div class="text-yellow-400">→ PdOM process questions, metrics guidance</div>
+            </div>
+            <div class="text-sm">
+              <div class="font-medium text-yellow-300">Technology</div>
+              <div class="text-yellow-400">→ Service models, tool requests, best practices</div>
+            </div>
+            <div class="text-sm">
+              <div class="font-medium text-yellow-300">Acquisitions</div>
+              <div class="text-yellow-400">→ Procurement processes, templates</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech Lead Workflow -->
+    <div id="workflow-tech" class="workflow-section hidden">
+      <div class="space-y-6">
+        <div class="bg-green-900 border border-green-700 rounded-lg p-4">
+          <h3 class="font-medium text-green-200 mb-3">Your Role in the PdOM Process</h3>
+          <p class="text-sm text-green-300">
+            As a Technical Lead, you are responsible for system architecture, scalability, and technical execution. You collaborate 
+            with Product Managers to ensure solutions are built efficiently and align with mission needs while maintaining high technical standards.
+          </p>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+          <h4 class="font-medium text-gray-200 mb-4">Phase 2: Rapid Solution Development</h4>
+          <div class="space-y-4">
+            <div class="border-l-4 border-green-500 pl-4">
+              <h5 class="font-medium text-green-400 mb-2">1. Technical Architecture & Feasibility</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Assess technical feasibility of proposed solutions</li>
+                <li>Design system architecture for scalability and resilience</li>
+                <li>Evaluate existing tools and reusable components</li>
+                <li>Create technical roadmap aligned with MVP goals</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">Technology section for tools and environments</span>
+              </div>
+            </div>
+            
+            <div class="border-l-4 border-blue-500 pl-4">
+              <h5 class="font-medium text-blue-400 mb-2">2. Development Execution</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Follow 13-step development cycle methodology</li>
+                <li>Implement version control and automated testing</li>
+                <li>Coordinate with developers on code quality standards</li>
+                <li>Ensure iterative development with user feedback loops</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">The Software Way section for development practices</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+          <h4 class="font-medium text-gray-200 mb-4">Phase 3: Solution Integration</h4>
+          <div class="space-y-4">
+            <div class="border-l-4 border-purple-500 pl-4">
+              <h5 class="font-medium text-purple-400 mb-2">3. Security Integration</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Collaborate with security engineers on zero-trust principles</li>
+                <li>Implement automated ATO processes</li>
+                <li>Ensure compliance from development outset</li>
+                <li>Create Security and Compliance Plan</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">ATO section for security requirements and processes</span>
+              </div>
+            </div>
+            
+            <div class="border-l-4 border-indigo-500 pl-4">
+              <h5 class="font-medium text-indigo-400 mb-2">4. System Integration & Deployment</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Ensure seamless integration with existing systems</li>
+                <li>Coordinate deployment across environments</li>
+                <li>Implement monitoring and alerting systems</li>
+                <li>Support operationalization in user environment</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">Technology section for environments and deployment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+          <h4 class="font-medium text-gray-200 mb-4">Continuous Technical Leadership</h4>
+          <div class="space-y-4">
+            <div class="border-l-4 border-yellow-500 pl-4">
+              <h5 class="font-medium text-yellow-400 mb-2">5. Performance Monitoring & Optimization</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Monitor system performance and stability</li>
+                <li>Identify and resolve technical issues quickly</li>
+                <li>Optimize for scalability and efficiency</li>
+                <li>Mentor development team members</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">Dashboard metrics for performance tracking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-yellow-900 border border-yellow-600 rounded-lg p-4">
+          <h4 class="font-medium text-yellow-200 mb-2">Key Resources for Tech Leads</h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="text-sm">
+              <div class="font-medium text-yellow-300">The Software Way</div>
+              <div class="text-yellow-400">→ 13-step development cycle, best practices</div>
+            </div>
+            <div class="text-sm">
+              <div class="font-medium text-yellow-300">Technology</div>
+              <div class="text-yellow-400">→ Environments, tools, integration patterns</div>
+            </div>
+            <div class="text-sm">
+              <div class="font-medium text-yellow-300">ATO</div>
+              <div class="text-yellow-400">→ Security processes, compliance requirements</div>
+            </div>
+            <div class="text-sm">
+              <div class="font-medium text-yellow-300">Security</div>
+              <div class="text-yellow-400">→ Best practices, environment status</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Developer Workflow -->
+    <div id="workflow-dev" class="workflow-section hidden">
+      <div class="space-y-6">
+        <div class="bg-purple-900 border border-purple-700 rounded-lg p-4">
+          <h3 class="font-medium text-purple-200 mb-3">Your Role in the PdOM Process</h3>
+          <p class="text-sm text-purple-300">
+            As a Developer, you implement the technical solutions that deliver mission value. You work within Software Development Units (SDUs) 
+            following agile methodologies and the 13-step development cycle to build, test, and deploy high-quality software.
+          </p>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+          <h4 class="font-medium text-gray-200 mb-4">Development Lifecycle (13-Step Process)</h4>
+          <div class="space-y-4">
+            <div class="border-l-4 border-blue-500 pl-4">
+              <h5 class="font-medium text-blue-400 mb-2">Before Writing Code (Steps 1-3)</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Collaborate with Product Manager on requirements</li>
+                <li>Understand user needs and workflows deeply</li>
+                <li>Prioritize features for rapid value delivery</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">Teams & Roles to understand stakeholders</span>
+              </div>
+            </div>
+            
+            <div class="border-l-4 border-green-500 pl-4">
+              <h5 class="font-medium text-green-400 mb-2">During Development (Steps 4-7)</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Use version control consistently</li>
+                <li>Track work progress and document changes</li>
+                <li>Implement automated testing</li>
+                <li>Document APIs and share with team</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">Technology section for development environments</span>
+              </div>
+            </div>
+            
+            <div class="border-l-4 border-purple-500 pl-4">
+              <h5 class="font-medium text-purple-400 mb-2">First Deliverable (Steps 8-10)</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Provide user support and feedback mechanisms</li>
+                <li>Automate deployment processes</li>
+                <li>Implement system monitoring</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">The Software Way for deployment best practices</span>
+              </div>
+            </div>
+            
+            <div class="border-l-4 border-orange-500 pl-4">
+              <h5 class="font-medium text-orange-400 mb-2">Iteration (Steps 11-13)</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Automate alerting and incident response</li>
+                <li>Use data to drive development decisions</li>
+                <li>Continuously iterate and improve</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">Dashboard metrics for performance monitoring</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+          <h4 class="font-medium text-gray-200 mb-4">Security & Compliance Integration</h4>
+          <div class="space-y-4">
+            <div class="border-l-4 border-red-500 pl-4">
+              <h5 class="font-medium text-red-400 mb-2">Security-First Development</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Embed security controls from the beginning</li>
+                <li>Follow zero-trust architecture principles</li>
+                <li>Use automated security scanning tools</li>
+                <li>Participate in security reviews early and often</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">Security section for policies and procedures</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+          <h4 class="font-medium text-gray-200 mb-4">Collaboration & Communication</h4>
+          <div class="space-y-4">
+            <div class="border-l-4 border-teal-500 pl-4">
+              <h5 class="font-medium text-teal-400 mb-2">Cross-Functional Teamwork</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Work closely with Tech Lead on architecture decisions</li>
+                <li>Collaborate with UX Designer on user interface implementation</li>
+                <li>Provide feedback to Product Manager on feasibility</li>
+                <li>Participate in user feedback sessions</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">Virtual Assistant for process questions</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-yellow-900 border border-yellow-600 rounded-lg p-4">
+          <h4 class="font-medium text-yellow-200 mb-2">Key Resources for Developers</h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="text-sm">
+              <div class="font-medium text-yellow-300">The Software Way</div>
+              <div class="text-yellow-400">→ 13-step cycle, coding standards, examples</div>
+            </div>
+            <div class="text-sm">
+              <div class="font-medium text-yellow-300">Technology</div>
+              <div class="text-yellow-400">→ Dev environments, tools, deployment guides</div>
+            </div>
+            <div class="text-sm">
+              <div class="font-medium text-yellow-300">Security</div>
+              <div class="text-yellow-400">→ Security practices, compliance requirements</div>
+            </div>
+            <div class="text-sm">
+              <div class="font-medium text-yellow-300">ATO</div>
+              <div class="text-yellow-400">→ Authorization processes, security integration</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UX Designer Workflow -->
+    <div id="workflow-ux" class="workflow-section hidden">
+      <div class="space-y-6">
+        <div class="bg-indigo-900 border border-indigo-700 rounded-lg p-4">
+          <h3 class="font-medium text-indigo-200 mb-3">Your Role in the PdOM Process</h3>
+          <p class="text-sm text-indigo-300">
+            As a UI/UX Designer, you translate product vision and user needs into intuitive, accessible experiences. You ensure 
+            solutions are human-centered and mission-aligned, working closely with Product Managers and Tech Leads to deliver effective digital experiences.
+          </p>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+          <h4 class="font-medium text-gray-200 mb-4">Phase 1: Mission Impact Assessment (User Research)</h4>
+          <div class="space-y-4">
+            <div class="border-l-4 border-blue-500 pl-4">
+              <h5 class="font-medium text-blue-400 mb-2">1. User Research & Needs Analysis</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Conduct user interviews and field observations</li>
+                <li>Map existing user workflows and pain points</li>
+                <li>Create user personas and journey maps</li>
+                <li>Analyze current tools and interfaces</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">Teams & Roles to identify user groups</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+          <h4 class="font-medium text-gray-200 mb-4">Phase 2: Rapid Solution Development (Design)</h4>
+          <div class="space-y-4">
+            <div class="border-l-4 border-green-500 pl-4">
+              <h5 class="font-medium text-green-400 mb-2">2. Co-Design & Prototyping</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Facilitate co-design sessions with users and PM</li>
+                <li>Create low-fidelity wireframes and prototypes</li>
+                <li>Design MVP interfaces focused on core workflows</li>
+                <li>Establish design system and component library</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">The Software Way for iterative design practices</span>
+              </div>
+            </div>
+            
+            <div class="border-l-4 border-purple-500 pl-4">
+              <h5 class="font-medium text-purple-400 mb-2">3. User Testing & Iteration</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Conduct usability testing with real users</li>
+                <li>Test prototypes in operational settings</li>
+                <li>Gather feedback and iterate on design</li>
+                <li>Validate design solutions against user needs</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">Virtual Assistant for testing methodologies</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+          <h4 class="font-medium text-gray-200 mb-4">Phase 3: Solution Integration (Implementation)</h4>
+          <div class="space-y-4">
+            <div class="border-l-4 border-indigo-500 pl-4">
+              <h5 class="font-medium text-indigo-400 mb-2">4. Design Implementation & QA</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Work with developers on UI implementation</li>
+                <li>Ensure design fidelity and accessibility compliance</li>
+                <li>Test integrated solutions with users</li>
+                <li>Create adoption and training materials</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">Technology section for implementation standards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+          <h4 class="font-medium text-gray-200 mb-4">Phase 4: Customer Value Assessment (Validation)</h4>
+          <div class="space-y-4">
+            <div class="border-l-4 border-orange-500 pl-4">
+              <h5 class="font-medium text-orange-400 mb-2">5. User Experience Validation</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Monitor user adoption and engagement metrics</li>
+                <li>Conduct post-deployment usability studies</li>
+                <li>Gather feedback on user satisfaction</li>
+                <li>Identify areas for UX improvement in next iteration</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">Dashboard for user engagement metrics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg border border-gray-700 p-4">
+          <h4 class="font-medium text-gray-200 mb-4">Design Standards & Accessibility</h4>
+          <div class="space-y-4">
+            <div class="border-l-4 border-pink-500 pl-4">
+              <h5 class="font-medium text-pink-400 mb-2">Accessibility & Inclusion</h5>
+              <ul class="text-sm text-gray-300 space-y-1 list-disc pl-5">
+                <li>Follow accessibility guidelines (Section 508, WCAG)</li>
+                <li>Design for diverse user needs and capabilities</li>
+                <li>Test with assistive technologies</li>
+                <li>Ensure interfaces work across security levels</li>
+              </ul>
+              <div class="mt-2">
+                <span class="text-xs text-blue-400">→ Use: </span>
+                <span class="text-xs text-blue-300">Security section for classification requirements</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-yellow-900 border border-yellow-600 rounded-lg p-4">
+          <h4 class="font-medium text-yellow-200 mb-2">Key Resources for UI/UX Designers</h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="text-sm">
+              <div class="font-medium text-yellow-300">Teams & Roles</div>
+              <div class="text-yellow-400">→ User groups, stakeholder mapping</div>
+            </div>
+            <div class="text-sm">
+              <div class="font-medium text-yellow-300">The Software Way</div>
+              <div class="text-yellow-400">→ User-centered design practices</div>
+            </div>
+            <div class="text-sm">
+              <div class="font-medium text-yellow-300">Technology</div>
+              <div class="text-yellow-400">→ Design tools, prototyping environments</div>
+            </div>
+            <div class="text-sm">
+              <div class="font-medium text-yellow-300">Virtual Assistant</div>
+              <div class="text-yellow-400">→ UX research methods, testing guidance</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cross-Role Collaboration Guide -->
+  <div class="bg-gray-800 rounded-lg border border-gray-700 p-6">
+    <h3 class="font-medium mb-4 text-gray-200">Cross-Role Collaboration</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="border border-gray-600 rounded-lg p-4">
+        <h4 class="font-medium text-blue-400 mb-3">Effective Team Dynamics</h4>
+        <ul class="text-sm text-gray-300 space-y-2 list-disc pl-5">
+          <li><strong>PM & Tech Lead:</strong> Align on technical feasibility and mission priorities</li>
+          <li><strong>PM & UX Designer:</strong> Ensure user needs drive product decisions</li>
+          <li><strong>Tech Lead & Developers:</strong> Maintain code quality and architecture standards</li>
+          <li><strong>UX Designer & Developers:</strong> Implement designs with accessibility and usability</li>
+        </ul>
+      </div>
+      <div class="border border-gray-600 rounded-lg p-4">
+        <h4 class="font-medium text-green-400 mb-3">Communication Best Practices</h4>
+        <ul class="text-sm text-gray-300 space-y-2 list-disc pl-5">
+          <li>Regular stand-ups to align on daily progress and blockers</li>
+          <li>Sprint reviews with user feedback integration</li>
+          <li>Cross-functional planning sessions for each PdOM phase</li>
+          <li>Retrospectives to continuously improve team processes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Virtual Assistant Link -->
+  <div data-react-component="VirtualAssistantLink" 
+       data-props='{"title":"Need help with your workflow?","description":"Ask the Virtual Assistant about PdOM processes, role-specific guidance, or team collaboration"}'></div>
+</div>
+
+<script>
+// Role switching functionality
+function showWorkflow(role) {
+  // Hide all workflows
+  document.querySelectorAll('.workflow-section').forEach(section => {
+    section.classList.add('hidden');
+  });
+  
+  // Reset all buttons
+  document.querySelectorAll('[id^="role-"]').forEach(button => {
+    button.className = 'p-3 rounded-lg border text-left transition-colors bg-gray-700 border-gray-600 text-gray-300 hover:bg-gray-600';
+  });
+  
+  // Show selected workflow
+  document.getElementById('workflow-' + role).classList.remove('hidden');
+  
+  // Highlight selected button
+  const selectedButton = document.getElementById('role-' + role);
+  const colors = {
+    pm: 'bg-blue-900 border-blue-600 text-blue-200',
+    tech: 'bg-green-900 border-green-600 text-green-200',
+    dev: 'bg-purple-900 border-purple-600 text-purple-200',
+    ux: 'bg-indigo-900 border-indigo-600 text-indigo-200'
+  };
+  selectedButton.className = `p-3 rounded-lg border text-left transition-colors ${colors[role]}`;
+}
+
+// Initialize page
+document.addEventListener('DOMContentLoaded', function() {
+  // Show PM workflow by default
+  showWorkflow('pm');
+});
+</script>

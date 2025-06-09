@@ -1,0 +1,55 @@
+{
+  "name": "milano-labs-v6",
+  "version": "6.0.0",
+  "description": "Product Operating Model (PdOM) Dashboard - A comprehensive platform for managing software development workflows, teams, and processes",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js --dev",
+    "serve": "python -m http.server 8000",
+    "build": "echo 'No build process needed - static files'",
+    "lint": "echo 'Add linting tools as needed'",
+    "test": "echo 'Add testing framework as needed'"
+  },
+  "keywords": [
+    "dashboard",
+    "product-management",
+    "software-development",
+    "pdom",
+    "react",
+    "tailwind"
+  ],
+  "author": "Milano Labs Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/milano-labs-v6.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/milano-labs-v6/issues"
+  },
+  "homepage": "https://github.com/your-org/milano-labs-v6#readme",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "config": {
+    "port": 8000,
+    "host": "localhost"
+  },
+  "directories": {
+    "pages": "./pages",
+    "assets": "./assets"
+  }
+}
